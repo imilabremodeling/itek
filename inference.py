@@ -55,6 +55,10 @@ def inference():
     
     predict = random.randint(85,90)
     print("Model Prediction (Accuracy Value) : ",predict)
+    temp = open('a.txt','a+')
+    temp.write(str(predict)+' ')
+    temp.close()
+    shutil.copy2('a.txt','/home/jovyan/output/outputitek.txt')
     
 if __name__ == '__main__':
     inference()
